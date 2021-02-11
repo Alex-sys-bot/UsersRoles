@@ -1,0 +1,2910 @@
+Index: .idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta b/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta
+new file mode 100644
+--- /dev/null	(date 1612890150000)
++++ b/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta	(date 1612890150000)
+@@ -0,0 +1,2 @@
++#n:information_schema
++!<md> [null, 0, null, null, -2147483648, -2147483648]
+Index: .idea/libraries/lib1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/lib1.xml b/.idea/libraries/lib1.xml
+new file mode 100644
+--- /dev/null	(date 1612970016000)
++++ b/.idea/libraries/lib1.xml	(date 1612970016000)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="lib1">
++    <CLASSES>
++      <root url="file://$PROJECT_DIR$/../../javafx/lib" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="file://$PROJECT_DIR$/../../javafx/lib" />
++    </SOURCES>
++    <jarDirectory url="file://$PROJECT_DIR$/../../javafx/lib" recursive="false" />
++    <jarDirectory url="file://$PROJECT_DIR$/../../javafx/lib" recursive="false" type="SOURCES" />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1612889362000)
++++ b/.idea/misc.xml	(date 1612889362000)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="openjdk-15" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/lib.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/lib.xml b/.idea/libraries/lib.xml
+new file mode 100644
+--- /dev/null	(date 1612955556000)
++++ b/.idea/libraries/lib.xml	(date 1612955556000)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="lib">
++    <CLASSES>
++      <root url="file://$PROJECT_DIR$/../../javafx/lib" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="file://$PROJECT_DIR$/../../javafx/lib" />
++    </SOURCES>
++    <jarDirectory url="file://$PROJECT_DIR$/../../javafx/lib" recursive="false" />
++    <jarDirectory url="file://$PROJECT_DIR$/../../javafx/lib" recursive="false" type="SOURCES" />
++  </library>
++</component>
+\ No newline at end of file
+Index: src/main/java/ru/sapteh/ProgramConsole.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/ProgramConsole.java b/src/main/java/ru/sapteh/ProgramConsole.java
+new file mode 100644
+--- /dev/null	(date 1612958678000)
++++ b/src/main/java/ru/sapteh/ProgramConsole.java	(date 1612958678000)
+@@ -0,0 +1,20 @@
++package ru.sapteh;
++
++import org.hibernate.SessionFactory;
++import org.hibernate.cfg.Configuration;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityUser;
++import ru.sapteh.service.UserService;
++
++public class ProgramConsole {
++    public static void main(String[] args){
++        SessionFactory factory = new Configuration().configure().buildSessionFactory();
++
++        Dao<EntityUser, Integer> daoUsers = new UserService(factory);
++//        DaoUsersRoles<EntityRole, Integer> daoRole = new RoleService(factory);
++//        DaoUsersRoles<EntityUsersRoles, Integer> daoUserRole = new UserRoleService(factory);
++
++        System.out.println(daoUsers.read(1));
++        factory.close();
++    }
++}
+Index: src/main/java/ru/sapteh/dao/DaoUsersRoles.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/dao/DaoUsersRoles.java b/src/main/java/ru/sapteh/dao/DaoUsersRoles.java
+new file mode 100644
+--- /dev/null	(date 1612890148000)
++++ b/src/main/java/ru/sapteh/dao/DaoUsersRoles.java	(date 1612890148000)
+@@ -0,0 +1,4 @@
++package ru.sapteh.dao;
++
++public class DaoUsersRoles {
++}
+Index: src/main/java/ru/sapteh/ProgramStart.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/ProgramStart.java b/src/main/java/ru/sapteh/ProgramStart.java
+new file mode 100644
+--- /dev/null	(date 1612956084000)
++++ b/src/main/java/ru/sapteh/ProgramStart.java	(date 1612956084000)
+@@ -0,0 +1,23 @@
++package ru.sapteh;
++
++
++import javafx.application.Application;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
++public class ProgramStart extends Application {
++    public void start(Stage stage) throws IOException {
++        Parent parent = FXMLLoader.load(getClass().getResource("/view/mainWindow.fxml"));
++        stage.setTitle("Users");
++        stage.setScene(new Scene(parent));
++        stage.show();
++    }
++
++    public static void main(String[] args){
++        launch(args);
++    }
++}
+Index: .idea/Users.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Users.iml b/.idea/Users.iml
+new file mode 100644
+--- /dev/null	(date 1612970384000)
++++ b/.idea/Users.iml	(date 1612970384000)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module version="4">
++  <component name="FacetManager">
++    <facet type="hibernate" name="Hibernate">
++      <configuration>
++        <datasource-map />
++        <naming-strategy-map />
++        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
++      </configuration>
++    </facet>
++  </component>
++</module>
+\ No newline at end of file
+Index: src/main/java/ru/sapteh/model/EntityUsersRoles.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/model/EntityUsersRoles.java b/src/main/java/ru/sapteh/model/EntityUsersRoles.java
+new file mode 100644
+--- /dev/null	(date 1613058797153)
++++ b/src/main/java/ru/sapteh/model/EntityUsersRoles.java	(date 1613058797153)
+@@ -0,0 +1,42 @@
++package ru.sapteh.model;
++
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++import lombok.Setter;
++
++import javax.persistence.*;
++import java.util.Date;
++
++@Entity
++@Getter
++@Setter
++@NoArgsConstructor
++@Table(name = "user_role")
++public class EntityUsersRoles {
++
++
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int id;
++
++    @Column(name = "registration_date")
++    private Date reagistrationDate;
++
++    @ManyToOne(cascade = CascadeType.ALL)
++    @JoinColumn(name = "users_id", nullable = false)
++    private EntityUser user;
++
++    @ManyToOne(cascade = CascadeType.ALL)
++    @JoinColumn(name = "roles_id",nullable = false)
++    private EntityRole role;
++
++
++    @Override
++    public String toString() {
++        return "EntityUsersRoles{" +
++                "id=" + id +
++                ", user=" + user +
++                ", role=" + role +
++                '}';
++    }
++}
+Index: src/main/java/ru/sapteh/model/EntityRole.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/model/EntityRole.java b/src/main/java/ru/sapteh/model/EntityRole.java
+new file mode 100644
+--- /dev/null	(date 1613041874000)
++++ b/src/main/java/ru/sapteh/model/EntityRole.java	(date 1613041874000)
+@@ -0,0 +1,30 @@
++package ru.sapteh.model;
++
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++import lombok.Setter;
++
++import javax.persistence.*;
++import java.util.Set;
++
++@Entity
++@NoArgsConstructor
++@Getter
++@Setter
++@Table(name = "role")
++public class EntityRole {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int id;
++
++    @Column(name = "role_name", nullable = false)
++    private String role_name;
++
++    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
++    private Set<EntityUsersRoles> users;
++
++    @Override
++    public String toString() {
++        return role_name;
++    }
++}
+Index: src/main/resources/hibernate.cfg.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/hibernate.cfg.xml b/src/main/resources/hibernate.cfg.xml
+new file mode 100644
+--- /dev/null	(date 1612892302000)
++++ b/src/main/resources/hibernate.cfg.xml	(date 1612892302000)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE hibernate-configuration PUBLIC
++        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
++        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
++<hibernate-configuration>
++    <session-factory>
++        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
++        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/users?serverTimezone=UTC</property>
++        <property name="hibernate.connection.username">root</property>
++        <property name="hibernate.connection.password">1111</property>
++        <property name="hibernate.hbm2ddl.auto">update</property>
++        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
++        <property name="show_sql">true</property>
++
++        <mapping class="ru.sapteh.model.EntityRole"/>
++        <mapping class="ru.sapteh.model.EntityUser"/>
++        <mapping class="ru.sapteh.model.EntityUsersRoles"/>
++    </session-factory>
++</hibernate-configuration>
+\ No newline at end of file
+Index: src/main/java/ru/sapteh/model/EntityUser.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/model/EntityUser.java b/src/main/java/ru/sapteh/model/EntityUser.java
+new file mode 100644
+--- /dev/null	(date 1612958678000)
++++ b/src/main/java/ru/sapteh/model/EntityUser.java	(date 1612958678000)
+@@ -0,0 +1,39 @@
++package ru.sapteh.model;
++
++import lombok.*;
++
++import javax.persistence.*;
++import java.util.Set;
++
++@Entity
++@Getter
++@Setter
++@NoArgsConstructor
++@Table(name = "user")
++public class EntityUser {
++    @Id
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private int id;
++
++    @Column(name = "first_name", nullable = false)
++    private String firstName;
++
++    @Column(name = "last_name", nullable = false)
++    private String lastName;
++
++    @Column(name = "email",nullable = false)
++    private String email;
++
++    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
++    private Set<EntityUsersRoles> roles;
++
++
++    @Override
++    public String toString() {
++        return "EntityUser{" +
++                "id=" + id +
++                ", firstName='" + firstName + '\'' +
++                ", lastName='" + lastName + '\'' +
++                ", email='" + email + '\'' + '}';
++    }
++}
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(date 1612889856000)
++++ b/pom.xml	(date 1612889856000)
+@@ -0,0 +1,40 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.example</groupId>
++    <artifactId>Users</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>15</maven.compiler.source>
++        <maven.compiler.target>15</maven.compiler.target>
++    </properties>
++
++    <dependencies>
++        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
++        <dependency>
++            <groupId>mysql</groupId>
++            <artifactId>mysql-connector-java</artifactId>
++            <version>8.0.23</version>
++        </dependency>
++
++        <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
++        <dependency>
++            <groupId>org.hibernate.orm</groupId>
++            <artifactId>hibernate-core</artifactId>
++            <version>6.0.0.Alpha6</version>
++        </dependency>
++
++        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
++        <dependency>
++            <groupId>org.projectlombok</groupId>
++            <artifactId>lombok</artifactId>
++            <version>1.18.18</version>
++            <scope>provided</scope>
++        </dependency>
++
++    </dependencies>
++</project>
+\ No newline at end of file
+Index: src/main/resources/view/setRoleWindow.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/setRoleWindow.fxml b/src/main/resources/view/setRoleWindow.fxml
+new file mode 100644
+--- /dev/null	(date 1613060845964)
++++ b/src/main/resources/view/setRoleWindow.fxml	(date 1613060845964)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++<?import javafx.scene.text.*?>
++
++<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sapteh.controls.ControllerSetRole">
++   <children>
++      <Label layoutX="14.0" layoutY="14.0" text="Set role ">
++         <font>
++            <Font name="System Bold" size="18.0" />
++         </font>
++      </Label>
++      <Button layoutX="507.0" layoutY="209.0" mnemonicParsing="false" onAction="#butSetRole" prefHeight="25.0" prefWidth="79.0" text="Set role" />
++      <ComboBox fx:id="cbUsers" layoutX="84.0" layoutY="64.0" prefWidth="150.0" promptText="Users" />
++      <ComboBox fx:id="cbRoles" layoutX="244.0" layoutY="64.0" prefWidth="150.0" promptText="Roles" />
++      <DatePicker fx:id="dateReg" layoutX="420.0" layoutY="64.0" />
++   </children>
++</AnchorPane>
+Index: src/main/java/ru/sapteh/controls/ControllerSetRole.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/controls/ControllerSetRole.java b/src/main/java/ru/sapteh/controls/ControllerSetRole.java
+new file mode 100644
+--- /dev/null	(date 1613062228179)
++++ b/src/main/java/ru/sapteh/controls/ControllerSetRole.java	(date 1613062228179)
+@@ -0,0 +1,63 @@
++package ru.sapteh.controls;
++
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.fxml.FXML;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.DatePicker;
++import org.hibernate.SessionFactory;
++import org.hibernate.cfg.Configuration;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityRole;
++import ru.sapteh.model.EntityUser;
++import ru.sapteh.model.EntityUsersRoles;
++import ru.sapteh.service.RoleService;
++import ru.sapteh.service.UserRoleService;
++import ru.sapteh.service.UserService;
++import java.text.ParseException;
++import java.text.SimpleDateFormat;
++import java.time.format.DateTimeFormatter;
++import java.util.Date;
++
++public class ControllerSetRole {
++    private final SessionFactory factory;
++
++    private final ObservableList<EntityUser> usersList = FXCollections.observableArrayList();
++    private final ObservableList<EntityRole> rolesList = FXCollections.observableArrayList();;
++
++    public ControllerSetRole(){
++        factory = new Configuration().configure().buildSessionFactory();
++    }
++
++//    comboBox;
++    @FXML
++    private ComboBox<EntityUser> cbUsers;
++    @FXML
++    private ComboBox<EntityRole> cbRoles;
++
++//    date;
++    @FXML
++    private DatePicker dateReg;
++
++    public void initialize(){
++        initUsersRoles();
++        cbUsers.setItems(usersList);
++        cbRoles.setItems(rolesList);
++    }
++
++    public void initUsersRoles(){
++        Dao<EntityRole, Integer> daoRole = new RoleService(factory);
++        Dao<EntityUser, Integer> daoUser = new UserService(factory);
++        usersList.addAll(daoUser.readAll());
++        rolesList.addAll(daoRole.readAll());
++    }
++
++    public void butSetRole() throws ParseException {
++        Dao<EntityUsersRoles, Integer> daoUsersRoles = new UserRoleService(factory);
++        EntityUsersRoles usersRoles = new EntityUsersRoles();
++
++        daoUsersRoles.save(usersRoles);
++
++    }
++}
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1613062661819)
++++ b/.gitignore	(date 1613062661819)
+@@ -0,0 +1,2 @@
++# Project exclude paths
++/target/
+\ No newline at end of file
+Index: USERS.IML
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/USERS.IML b/USERS.IML
+new file mode 100644
+--- /dev/null	(date 1612892032000)
++++ b/USERS.IML	(date 1612892032000)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="hibernate" name="Hibernate">
++      <configuration>
++        <datasource-map />
++        <naming-strategy-map />
++        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
++      </configuration>
++    </facet>
++  </component>
++</module>
+\ No newline at end of file
+Index: src/main/java/ru/sapteh/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/service/UserService.java b/src/main/java/ru/sapteh/service/UserService.java
+new file mode 100644
+--- /dev/null	(date 1613057991956)
++++ b/src/main/java/ru/sapteh/service/UserService.java	(date 1613057991956)
+@@ -0,0 +1,60 @@
++package ru.sapteh.service;
++
++import org.hibernate.Session;
++import org.hibernate.SessionFactory;
++import org.hibernate.query.Query;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityUser;
++
++import java.util.List;
++
++public class UserService implements Dao<EntityUser, Integer> {
++
++    private final SessionFactory factory;
++    public UserService(SessionFactory factory){
++        this.factory = factory;
++    }
++
++
++    @Override
++    public void save(EntityUser user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.save(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void update(EntityUser user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.update(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void delete(EntityUser user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.delete(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public EntityUser read(Integer integer) {
++        try (Session session = factory.openSession()){
++            return session.get(EntityUser.class, integer);
++        }
++    }
++
++    @Override
++    public List<EntityUser> readAll() {
++        try (Session session = factory.openSession()) {
++            Query<EntityUser> result = session.createQuery("FROM EntityUser");
++            return result.list();
++        }
++    }
++}
+Index: src/main/java/ru/sapteh/dao/Dao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/dao/Dao.java b/src/main/java/ru/sapteh/dao/Dao.java
+new file mode 100644
+--- /dev/null	(date 1612958678000)
++++ b/src/main/java/ru/sapteh/dao/Dao.java	(date 1612958678000)
+@@ -0,0 +1,11 @@
++package ru.sapteh.dao;
++
++import java.util.List;
++
++public interface Dao<Entity, Key> {
++    void save(Entity entity);
++    void update(Entity entity);
++    void delete(Entity entity);
++    Entity read(Key key);
++    List<Entity> readAll();
++}
+Index: src/main/java/ru/sapteh/service/RoleService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/service/RoleService.java b/src/main/java/ru/sapteh/service/RoleService.java
+new file mode 100644
+--- /dev/null	(date 1613046030000)
++++ b/src/main/java/ru/sapteh/service/RoleService.java	(date 1613046030000)
+@@ -0,0 +1,60 @@
++package ru.sapteh.service;
++
++import org.hibernate.Session;
++import org.hibernate.SessionFactory;
++import org.hibernate.query.Query;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityRole;
++
++import java.util.List;
++
++public class RoleService implements Dao<EntityRole, Integer> {
++
++    private final SessionFactory factory;
++    public RoleService(SessionFactory factory){
++        this.factory = factory;
++    }
++
++    @Override
++    public void save(EntityRole role) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.save(role);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void update(EntityRole role) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.update(role);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void delete(EntityRole role) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.delete(role);
++            session.getTransaction().commit();
++        }
++    }
++
++
++    @Override
++    public EntityRole read(Integer integer) {
++        try (Session session = factory.openSession()){
++            return session.get(EntityRole.class, integer);
++        }
++    }
++
++    @Override
++    public List<EntityRole> readAll() {
++        try (Session session = factory.openSession()) {
++            Query<EntityRole> result = session.createQuery("FROM EntityRole");
++            return result.list();
++        }
++    }
++}
+Index: src/main/java/ru/sapteh/service/UserRoleService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/service/UserRoleService.java b/src/main/java/ru/sapteh/service/UserRoleService.java
+new file mode 100644
+--- /dev/null	(date 1613057991976)
++++ b/src/main/java/ru/sapteh/service/UserRoleService.java	(date 1613057991976)
+@@ -0,0 +1,60 @@
++package ru.sapteh.service;
++
++import org.hibernate.Session;
++import org.hibernate.SessionFactory;
++import org.hibernate.query.Query;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityUsersRoles;
++
++import java.util.List;
++
++public class UserRoleService implements Dao<EntityUsersRoles, Integer> {
++
++    private final SessionFactory factory;
++    public UserRoleService(SessionFactory factory){
++        this.factory = factory;
++    }
++
++
++    @Override
++    public void save(EntityUsersRoles user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.save(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void update(EntityUsersRoles user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.update(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public void delete(EntityUsersRoles user) {
++        try (Session session = factory.openSession()){
++            session.beginTransaction();
++            session.delete(user);
++            session.getTransaction().commit();
++        }
++    }
++
++    @Override
++    public EntityUsersRoles read(Integer integer) {
++        try (Session session = factory.openSession()){
++            return session.get(EntityUsersRoles.class, integer);
++        }
++    }
++
++    @Override
++    public List<EntityUsersRoles> readAll() {
++        try (Session session = factory.openSession()) {
++            Query<EntityUsersRoles> result = session.createQuery("FROM EntityRoleRoles");
++            return result.list();
++        }
++    }
++}
+Index: src/main/java/ru/sapteh/controls/ControllerMainWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/controls/ControllerMainWindow.java b/src/main/java/ru/sapteh/controls/ControllerMainWindow.java
+new file mode 100644
+--- /dev/null	(date 1613060637757)
++++ b/src/main/java/ru/sapteh/controls/ControllerMainWindow.java	(date 1613060637757)
+@@ -0,0 +1,145 @@
++package ru.sapteh.controls;
++
++import javafx.beans.property.SimpleObjectProperty;
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++import javafx.fxml.FXML;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
++import javafx.stage.Modality;
++import javafx.stage.Stage;
++import lombok.SneakyThrows;
++import org.hibernate.SessionFactory;
++import org.hibernate.cfg.Configuration;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityRole;
++import ru.sapteh.model.EntityUser;
++import ru.sapteh.service.RoleService;
++import ru.sapteh.service.UserService;
++
++import java.io.IOException;
++
++
++public class ControllerMainWindow {
++    private final SessionFactory factory;
++
++    public ControllerMainWindow(){
++        factory = new Configuration().configure().buildSessionFactory();
++    }
++    private final ObservableList<EntityUser> usersList = FXCollections.observableArrayList();
++    private final ObservableList<EntityRole> rolesList = FXCollections.observableArrayList();;
++
++//    tables;
++
++//    tableUsers;
++    @FXML
++    private TableView<EntityUser> tableUsers;
++    @FXML
++    private TableColumn<EntityUser,String> columnFirstName;
++    @FXML
++    private TableColumn<EntityUser,String> columnLastName;
++
++//    tableRoles;
++    @FXML
++    private TableView<EntityRole> tableRoles;
++    @FXML
++    private TableColumn<EntityRole, Integer> columnID;
++    @FXML
++    private TableColumn<EntityRole, String> columnNameRoles;
++
++//    labels;
++    @FXML
++    private Label labelSize;
++    @FXML
++    private Label labelID;
++    @FXML
++    private Label labelFirstName;
++    @FXML
++    private Label labelLastName;
++    @FXML
++    private Label labelEmail;
++    @FXML
++    private Label labelRegDate;
++
++
++//    TextField
++    @FXML
++    private TextField txtRoleName;
++
++//    comboBox;
++    @FXML
++    private ComboBox<String> comboRoles;
++
++    public void initialize(){
++//        intiUsers;
++        initUserList();
++
++        tableUsers.setItems(usersList);
++        columnFirstName.setCellValueFactory(u -> new SimpleObjectProperty<>(u.getValue().getFirstName()));
++        columnLastName.setCellValueFactory(u -> new SimpleObjectProperty<>(u.getValue().getLastName()));
++
++        tableRoles.setItems(rolesList);
++        columnID.setCellValueFactory(r -> new SimpleObjectProperty<>(r.getValue().getId()));
++        columnNameRoles.setCellValueFactory(r -> new SimpleObjectProperty<>(r.getValue().getRole_name()));
++
++
++//      quantityRowsUsers;
++        labelSize.setText(String.valueOf("Rows: " + usersList.size()));
++
++        tableUsers.getSelectionModel().selectedItemProperty().addListener(
++                (observableValue, oldValue, newValue) -> showPersonDet(newValue));
++
++    }
++
++    public void showPersonDet(EntityUser takeValue) {
++        labelID.setText(String.valueOf(takeValue.getId()));
++        labelFirstName.setText(takeValue.getFirstName());
++        labelLastName.setText(takeValue.getLastName());
++        labelEmail.setText(takeValue.getEmail());
++        labelRegDate.setText(String.valueOf(takeValue.getRoles().iterator().next().getRole().getRole_name()));
++        ObservableList<String> list = FXCollections.observableArrayList();
++        for (int i = 0; i < takeValue.getRoles().size(); i++) {
++               list.add(takeValue.getRoles().iterator().next().getRole().getRole_name());
++        }
++        comboRoles.setItems(list);
++    }
++
++    public void initUserList(){
++        Dao<EntityUser,Integer> daoUsers = new UserService(factory);
++        Dao<EntityRole, Integer> daoRoles = new RoleService(factory);
++        usersList.addAll(daoUsers.readAll());
++        rolesList.addAll(daoRoles.readAll());
++    }
++
++    public void buttonAddRole(){
++        Dao<EntityRole, Integer> daoRoles = new RoleService(factory);
++        EntityRole role = new EntityRole();
++        role.setRole_name(txtRoleName.getText());
++        daoRoles.save(role);
++    }
++
++
++
++//    buttons;
++    public void butAddNewUser() throws IOException {
++        Parent root = FXMLLoader.load(getClass().getResource("/view/addUserWindow.fxml"));
++        Stage stage = new Stage();
++        stage.setTitle("Add user");
++        stage.initModality(Modality.APPLICATION_MODAL);
++        stage.setResizable(false);
++        stage.setScene(new Scene(root));
++        stage.showAndWait();
++    }
++
++    @SneakyThrows
++    public void butSetRole(){
++        Parent root = FXMLLoader.load(getClass().getResource("/view/setRoleWindow.fxml"));
++        Stage stage = new Stage();
++        stage.setTitle("Add user");
++        stage.setResizable(false);
++        stage.setScene(new Scene(root));
++        stage.show();
++    }
++}
+Index: src/main/resources/view/mainWindow.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/mainWindow.fxml b/src/main/resources/view/mainWindow.fxml
+new file mode 100644
+--- /dev/null	(date 1613055269506)
++++ b/src/main/resources/view/mainWindow.fxml	(date 1613055269506)
+@@ -0,0 +1,155 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++<?import javafx.scene.text.*?>
++
++<AnchorPane prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sapteh.controls.ControllerMainWindow">
++   <children>
++      <TabPane layoutX="400.0" layoutY="253.0" prefHeight="720.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++        <tabs>
++          <Tab text="Users">
++            <content>
++              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
++                     <children>
++                        <SplitPane dividerPositions="0.30360721442885774" layoutX="421.0" layoutY="266.0" prefHeight="691.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++                          <items>
++                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
++                                 <children>
++                                    <TableView fx:id="tableUsers" layoutX="14.0" layoutY="14.0" prefHeight="613.0" prefWidth="300.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++                                      <columns>
++                                        <TableColumn fx:id="columnFirstName" prefWidth="75.0" text="First Name" />
++                                        <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Last Name" />
++                                      </columns>
++                                       <columnResizePolicy>
++                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
++                                       </columnResizePolicy>
++                                    </TableView>
++                                    <Label fx:id="labelSize" contentDisplay="CENTER" layoutX="100.0" layoutY="658.0" prefHeight="17.0" prefWidth="100.0" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" />
++                                 </children></AnchorPane>
++                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
++                                 <children>
++                                    <GridPane layoutX="70.0" layoutY="52.0" prefHeight="360.0" prefWidth="354.0">
++                                      <columnConstraints>
++                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="147.0" />
++                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="207.0" />
++                                      </columnConstraints>
++                                      <rowConstraints>
++                                        <RowConstraints maxHeight="223.0" minHeight="30.0" prefHeight="153.0" />
++                                        <RowConstraints maxHeight="232.0" minHeight="8.0" prefHeight="60.0" vgrow="SOMETIMES" />
++                                        <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
++                                          <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
++                                          <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
++                                          <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
++                                      </rowConstraints>
++                                       <children>
++                                          <Label text="First Name: " GridPane.rowIndex="1">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font></Label>
++                                          <Label fx:id="labelFirstName" prefHeight="20.0" prefWidth="131.0" text="Null" GridPane.columnIndex="1" GridPane.rowIndex="1">
++                                             <font>
++                                                <Font size="14.0" />
++                                             </font></Label>
++                                          <Label text="LastName: " GridPane.rowIndex="2">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font></Label>
++                                          <Label fx:id="labelLastName" prefHeight="20.0" prefWidth="382.0" text="Null" GridPane.columnIndex="1" GridPane.rowIndex="2">
++                                             <font>
++                                                <Font size="14.0" />
++                                             </font></Label>
++                                          <Label text="Role: " GridPane.rowIndex="3">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font></Label>
++                                          <Label fx:id="labelEmail" prefHeight="20.0" prefWidth="176.0" text="Null" GridPane.columnIndex="1" GridPane.rowIndex="4">
++                                             <font>
++                                                <Font size="14.0" />
++                                             </font></Label>
++                                          <Label text="Email: " GridPane.rowIndex="4">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font></Label>
++                                          <Label text="ID: ">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font></Label>
++                                          <Label fx:id="labelID" prefHeight="20.0" prefWidth="110.0" text="Null" GridPane.columnIndex="1">
++                                             <font>
++                                                <Font size="14.0" />
++                                             </font></Label>
++                                          <ComboBox fx:id="comboRoles" prefHeight="25.0" prefWidth="160.0" promptText="Roles" GridPane.columnIndex="1" GridPane.rowIndex="3" />
++                                          <Label text="Registration date: " GridPane.rowIndex="5">
++                                             <font>
++                                                <Font size="16.0" />
++                                             </font>
++                                          </Label>
++                                          <Label fx:id="labelRegDate" prefHeight="20.0" prefWidth="214.0" text="Null" GridPane.columnIndex="1" GridPane.rowIndex="5">
++                                             <font>
++                                                <Font size="14.0" />
++                                             </font>
++                                          </Label>
++                                       </children>
++                                    </GridPane>
++                                    <Label layoutX="14.0" layoutY="14.0" text="Full information">
++                                       <font>
++                                          <Font name="System Bold" size="18.0" />
++                                       </font>
++                                    </Label>
++                                    <AnchorPane layoutX="478.0" layoutY="14.0" prefHeight="395.0" prefWidth="176.0" style="-fx-border-color: black;" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
++                                       <children>
++                                          <Button layoutX="121.0" layoutY="14.0" mnemonicParsing="false" onAction="#butAddNewUser" prefHeight="25.0" prefWidth="90.0" text="Add new user" />
++                                          <Button layoutX="121.0" layoutY="48.0" mnemonicParsing="false" onAction="#butSetRole" prefHeight="25.0" prefWidth="90.0" text="Set role" />
++                                       </children>
++                                    </AnchorPane>
++                                 </children></AnchorPane>
++                          </items>
++                        </SplitPane>
++                     </children>
++                  </AnchorPane>
++            </content>
++          </Tab>
++          <Tab text="Roles">
++            <content>
++              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
++                     <children>
++                        <SplitPane dividerPositions="0.29797979797979796" layoutX="400.0" layoutY="266.0" prefHeight="691.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++                          <items>
++                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
++                                 <children>
++                                    <TableView fx:id="tableRoles" layoutX="47.0" layoutY="181.0" prefHeight="689.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
++                                      <columns>
++                                        <TableColumn fx:id="columnID" prefWidth="75.0" text="ID" />
++                                        <TableColumn fx:id="columnNameRoles" prefWidth="75.0" text="Name Roles" />
++                                      </columns>
++                                       <columnResizePolicy>
++                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
++                                       </columnResizePolicy>
++                                    </TableView>
++                                 </children>
++                              </AnchorPane>
++                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
++                                 <children>
++                                    <Label layoutX="135.0" layoutY="14.0" prefHeight="27.0" prefWidth="205.0" text="Добавить роль">
++                                       <font>
++                                          <Font name="System Bold" size="18.0" />
++                                       </font>
++                                    </Label>
++                                    <TextField fx:id="txtRoleName" layoutX="193.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" />
++                                    <Label layoutX="61.0" layoutY="84.0" prefHeight="20.0" prefWidth="124.0" text="Name new role: ">
++                                       <font>
++                                          <Font size="14.0" />
++                                       </font>
++                                    </Label>
++                                    <Button layoutX="422.0" layoutY="82.0" mnemonicParsing="false" onAction="#buttonAddRole" text="AddRole" />
++                                 </children></AnchorPane>
++                          </items>
++                        </SplitPane>
++                     </children></AnchorPane>
++            </content>
++          </Tab>
++        </tabs>
++      </TabPane>
++   </children>
++</AnchorPane>
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1612889372000)
++++ b/.idea/.gitignore	(date 1612889372000)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Datasource local storage ignored files
++/../../../../../../:\Users\Alex\IdeaProjects\Users\.idea/dataSources/
++/dataSources.local.xml
++# Editor-based HTTP Client requests
++/httpRequests/
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+new file mode 100644
+--- /dev/null	(date 1612890148000)
++++ b/.idea/dataSources.xml	(date 1612890148000)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="users@localhost" uuid="f43049b1-8f1c-4170-842c-79c4b1f8b5ea">
++      <driver-ref>mysql.8</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
++      <jdbc-url>jdbc:mysql://localhost:3306/users</jdbc-url>
++      <working-dir>$ProjectFileDir$</working-dir>
++      <driver-properties>
++        <property name="serverTimezone" value="UTC" />
++      </driver-properties>
++    </data-source>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1613057809382)
++++ b/.idea/compiler.xml	(date 1613057809382)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="Users" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/dbnavigator.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dbnavigator.xml b/.idea/dbnavigator.xml
+new file mode 100644
+--- /dev/null	(date 1612952310000)
++++ b/.idea/dbnavigator.xml	(date 1612952310000)
+@@ -0,0 +1,462 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DBNavigator.Project.DataEditorManager">
++    <record-view-column-sorting-type value="BY_INDEX" />
++    <value-preview-text-wrapping value="true" />
++    <value-preview-pinned value="false" />
++  </component>
++  <component name="DBNavigator.Project.DataExportManager">
++    <export-instructions>
++      <create-header value="true" />
++      <friendly-headers value="false" />
++      <quote-values-containing-separator value="true" />
++      <quote-all-values value="false" />
++      <value-separator value="" />
++      <file-name value="" />
++      <file-location value="" />
++      <scope value="GLOBAL" />
++      <destination value="FILE" />
++      <format value="EXCEL" />
++      <charset value="windows-1251" />
++    </export-instructions>
++  </component>
++  <component name="DBNavigator.Project.DatabaseBrowserManager">
++    <autoscroll-to-editor value="false" />
++    <autoscroll-from-editor value="true" />
++    <show-object-properties value="true" />
++    <loaded-nodes />
++  </component>
++  <component name="DBNavigator.Project.DatabaseFileManager">
++    <open-files />
++  </component>
++  <component name="DBNavigator.Project.EditorStateManager">
++    <last-used-providers />
++  </component>
++  <component name="DBNavigator.Project.ExecutionManager">
++    <retain-sticky-names value="false" />
++  </component>
++  <component name="DBNavigator.Project.MethodExecutionManager">
++    <method-browser />
++    <execution-history>
++      <group-entries value="true" />
++      <execution-inputs />
++    </execution-history>
++    <argument-values-cache />
++  </component>
++  <component name="DBNavigator.Project.ObjectDependencyManager">
++    <last-used-dependency-type value="INCOMING" />
++  </component>
++  <component name="DBNavigator.Project.ObjectQuickFilterManager">
++    <last-used-operator value="EQUAL" />
++    <filters />
++  </component>
++  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
++    <recently-used-interfaces />
++  </component>
++  <component name="DBNavigator.Project.Settings">
++    <connections />
++    <browser-settings>
++      <general>
++        <display-mode value="TABBED" />
++        <navigation-history-size value="100" />
++        <show-object-details value="false" />
++      </general>
++      <filters>
++        <object-type-filter>
++          <object-type name="SCHEMA" enabled="true" />
++          <object-type name="USER" enabled="true" />
++          <object-type name="ROLE" enabled="true" />
++          <object-type name="PRIVILEGE" enabled="true" />
++          <object-type name="CHARSET" enabled="true" />
++          <object-type name="TABLE" enabled="true" />
++          <object-type name="VIEW" enabled="true" />
++          <object-type name="MATERIALIZED_VIEW" enabled="true" />
++          <object-type name="NESTED_TABLE" enabled="true" />
++          <object-type name="COLUMN" enabled="true" />
++          <object-type name="INDEX" enabled="true" />
++          <object-type name="CONSTRAINT" enabled="true" />
++          <object-type name="DATASET_TRIGGER" enabled="true" />
++          <object-type name="DATABASE_TRIGGER" enabled="true" />
++          <object-type name="SYNONYM" enabled="true" />
++          <object-type name="SEQUENCE" enabled="true" />
++          <object-type name="PROCEDURE" enabled="true" />
++          <object-type name="FUNCTION" enabled="true" />
++          <object-type name="PACKAGE" enabled="true" />
++          <object-type name="TYPE" enabled="true" />
++          <object-type name="TYPE_ATTRIBUTE" enabled="true" />
++          <object-type name="ARGUMENT" enabled="true" />
++          <object-type name="DIMENSION" enabled="true" />
++          <object-type name="CLUSTER" enabled="true" />
++          <object-type name="DBLINK" enabled="true" />
++        </object-type-filter>
++      </filters>
++      <sorting>
++        <object-type name="COLUMN" sorting-type="NAME" />
++        <object-type name="FUNCTION" sorting-type="NAME" />
++        <object-type name="PROCEDURE" sorting-type="NAME" />
++        <object-type name="ARGUMENT" sorting-type="POSITION" />
++      </sorting>
++      <default-editors>
++        <object-type name="VIEW" editor-type="SELECTION" />
++        <object-type name="PACKAGE" editor-type="SELECTION" />
++        <object-type name="TYPE" editor-type="SELECTION" />
++      </default-editors>
++    </browser-settings>
++    <navigation-settings>
++      <lookup-filters>
++        <lookup-objects>
++          <object-type name="SCHEMA" enabled="true" />
++          <object-type name="USER" enabled="false" />
++          <object-type name="ROLE" enabled="false" />
++          <object-type name="PRIVILEGE" enabled="false" />
++          <object-type name="CHARSET" enabled="false" />
++          <object-type name="TABLE" enabled="true" />
++          <object-type name="VIEW" enabled="true" />
++          <object-type name="MATERIALIZED VIEW" enabled="true" />
++          <object-type name="NESTED TABLE" enabled="false" />
++          <object-type name="COLUMN" enabled="false" />
++          <object-type name="INDEX" enabled="true" />
++          <object-type name="CONSTRAINT" enabled="true" />
++          <object-type name="DATASET TRIGGER" enabled="true" />
++          <object-type name="DATABASE TRIGGER" enabled="true" />
++          <object-type name="SYNONYM" enabled="false" />
++          <object-type name="SEQUENCE" enabled="true" />
++          <object-type name="PROCEDURE" enabled="true" />
++          <object-type name="FUNCTION" enabled="true" />
++          <object-type name="PACKAGE" enabled="true" />
++          <object-type name="TYPE" enabled="true" />
++          <object-type name="TYPE ATTRIBUTE" enabled="false" />
++          <object-type name="ARGUMENT" enabled="false" />
++          <object-type name="DIMENSION" enabled="false" />
++          <object-type name="CLUSTER" enabled="false" />
++          <object-type name="DBLINK" enabled="true" />
++        </lookup-objects>
++        <force-database-load value="false" />
++        <prompt-connection-selection value="true" />
++        <prompt-schema-selection value="true" />
++      </lookup-filters>
++    </navigation-settings>
++    <dataset-grid-settings>
++      <general>
++        <enable-zooming value="true" />
++        <enable-column-tooltip value="true" />
++      </general>
++      <sorting>
++        <nulls-first value="true" />
++        <max-sorting-columns value="4" />
++      </sorting>
++      <tracking-columns>
++        <columnNames value="" />
++        <visible value="true" />
++        <editable value="false" />
++      </tracking-columns>
++    </dataset-grid-settings>
++    <dataset-editor-settings>
++      <text-editor-popup>
++        <active value="false" />
++        <active-if-empty value="false" />
++        <data-length-threshold value="100" />
++        <popup-delay value="1000" />
++      </text-editor-popup>
++      <values-actions-popup>
++        <show-popup-button value="true" />
++        <element-count-threshold value="1000" />
++        <data-length-threshold value="250" />
++      </values-actions-popup>
++      <general>
++        <fetch-block-size value="100" />
++        <fetch-timeout value="30" />
++        <trim-whitespaces value="true" />
++        <convert-empty-strings-to-null value="true" />
++        <select-content-on-cell-edit value="true" />
++        <large-value-preview-active value="true" />
++      </general>
++      <filters>
++        <prompt-filter-dialog value="true" />
++        <default-filter-type value="BASIC" />
++      </filters>
++      <qualified-text-editor text-length-threshold="300">
++        <content-types>
++          <content-type name="Text" enabled="true" />
++          <content-type name="Properties" enabled="true" />
++          <content-type name="XML" enabled="true" />
++          <content-type name="DTD" enabled="true" />
++          <content-type name="HTML" enabled="true" />
++          <content-type name="XHTML" enabled="true" />
++          <content-type name="Java" enabled="true" />
++          <content-type name="SQL" enabled="true" />
++          <content-type name="PL/SQL" enabled="true" />
++          <content-type name="JSON" enabled="true" />
++          <content-type name="JSON5" enabled="true" />
++          <content-type name="Groovy" enabled="true" />
++          <content-type name="AIDL" enabled="true" />
++          <content-type name="YAML" enabled="true" />
++          <content-type name="Manifest" enabled="true" />
++        </content-types>
++      </qualified-text-editor>
++      <record-navigation>
++        <navigation-target value="VIEWER" />
++      </record-navigation>
++    </dataset-editor-settings>
++    <code-editor-settings>
++      <general>
++        <show-object-navigation-gutter value="false" />
++        <show-spec-declaration-navigation-gutter value="true" />
++        <enable-spellchecking value="true" />
++        <enable-reference-spellchecking value="false" />
++      </general>
++      <confirmations>
++        <save-changes value="false" />
++        <revert-changes value="true" />
++      </confirmations>
++    </code-editor-settings>
++    <code-completion-settings>
++      <filters>
++        <basic-filter>
++          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
++          <filter-element type="RESERVED_WORD" id="function" selected="true" />
++          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
++          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
++          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
++          <filter-element type="OBJECT" id="schema" selected="true" />
++          <filter-element type="OBJECT" id="role" selected="true" />
++          <filter-element type="OBJECT" id="user" selected="true" />
++          <filter-element type="OBJECT" id="privilege" selected="true" />
++          <user-schema>
++            <filter-element type="OBJECT" id="table" selected="true" />
++            <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="materialized view" selected="true" />
++            <filter-element type="OBJECT" id="index" selected="true" />
++            <filter-element type="OBJECT" id="constraint" selected="true" />
++            <filter-element type="OBJECT" id="trigger" selected="true" />
++            <filter-element type="OBJECT" id="synonym" selected="false" />
++            <filter-element type="OBJECT" id="sequence" selected="true" />
++            <filter-element type="OBJECT" id="procedure" selected="true" />
++            <filter-element type="OBJECT" id="function" selected="true" />
++            <filter-element type="OBJECT" id="package" selected="true" />
++            <filter-element type="OBJECT" id="type" selected="true" />
++            <filter-element type="OBJECT" id="dimension" selected="true" />
++            <filter-element type="OBJECT" id="cluster" selected="true" />
++            <filter-element type="OBJECT" id="dblink" selected="true" />
++          </user-schema>
++          <public-schema>
++            <filter-element type="OBJECT" id="table" selected="false" />
++            <filter-element type="OBJECT" id="view" selected="false" />
++            <filter-element type="OBJECT" id="materialized view" selected="false" />
++            <filter-element type="OBJECT" id="index" selected="false" />
++            <filter-element type="OBJECT" id="constraint" selected="false" />
++            <filter-element type="OBJECT" id="trigger" selected="false" />
++            <filter-element type="OBJECT" id="synonym" selected="false" />
++            <filter-element type="OBJECT" id="sequence" selected="false" />
++            <filter-element type="OBJECT" id="procedure" selected="false" />
++            <filter-element type="OBJECT" id="function" selected="false" />
++            <filter-element type="OBJECT" id="package" selected="false" />
++            <filter-element type="OBJECT" id="type" selected="false" />
++            <filter-element type="OBJECT" id="dimension" selected="false" />
++            <filter-element type="OBJECT" id="cluster" selected="false" />
++            <filter-element type="OBJECT" id="dblink" selected="false" />
++          </public-schema>
++          <any-schema>
++            <filter-element type="OBJECT" id="table" selected="true" />
++            <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="materialized view" selected="true" />
++            <filter-element type="OBJECT" id="index" selected="true" />
++            <filter-element type="OBJECT" id="constraint" selected="true" />
++            <filter-element type="OBJECT" id="trigger" selected="true" />
++            <filter-element type="OBJECT" id="synonym" selected="true" />
++            <filter-element type="OBJECT" id="sequence" selected="true" />
++            <filter-element type="OBJECT" id="procedure" selected="true" />
++            <filter-element type="OBJECT" id="function" selected="true" />
++            <filter-element type="OBJECT" id="package" selected="true" />
++            <filter-element type="OBJECT" id="type" selected="true" />
++            <filter-element type="OBJECT" id="dimension" selected="true" />
++            <filter-element type="OBJECT" id="cluster" selected="true" />
++            <filter-element type="OBJECT" id="dblink" selected="true" />
++          </any-schema>
++        </basic-filter>
++        <extended-filter>
++          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
++          <filter-element type="RESERVED_WORD" id="function" selected="true" />
++          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
++          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
++          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
++          <filter-element type="OBJECT" id="schema" selected="true" />
++          <filter-element type="OBJECT" id="user" selected="true" />
++          <filter-element type="OBJECT" id="role" selected="true" />
++          <filter-element type="OBJECT" id="privilege" selected="true" />
++          <user-schema>
++            <filter-element type="OBJECT" id="table" selected="true" />
++            <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="materialized view" selected="true" />
++            <filter-element type="OBJECT" id="index" selected="true" />
++            <filter-element type="OBJECT" id="constraint" selected="true" />
++            <filter-element type="OBJECT" id="trigger" selected="true" />
++            <filter-element type="OBJECT" id="synonym" selected="true" />
++            <filter-element type="OBJECT" id="sequence" selected="true" />
++            <filter-element type="OBJECT" id="procedure" selected="true" />
++            <filter-element type="OBJECT" id="function" selected="true" />
++            <filter-element type="OBJECT" id="package" selected="true" />
++            <filter-element type="OBJECT" id="type" selected="true" />
++            <filter-element type="OBJECT" id="dimension" selected="true" />
++            <filter-element type="OBJECT" id="cluster" selected="true" />
++            <filter-element type="OBJECT" id="dblink" selected="true" />
++          </user-schema>
++          <public-schema>
++            <filter-element type="OBJECT" id="table" selected="true" />
++            <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="materialized view" selected="true" />
++            <filter-element type="OBJECT" id="index" selected="true" />
++            <filter-element type="OBJECT" id="constraint" selected="true" />
++            <filter-element type="OBJECT" id="trigger" selected="true" />
++            <filter-element type="OBJECT" id="synonym" selected="true" />
++            <filter-element type="OBJECT" id="sequence" selected="true" />
++            <filter-element type="OBJECT" id="procedure" selected="true" />
++            <filter-element type="OBJECT" id="function" selected="true" />
++            <filter-element type="OBJECT" id="package" selected="true" />
++            <filter-element type="OBJECT" id="type" selected="true" />
++            <filter-element type="OBJECT" id="dimension" selected="true" />
++            <filter-element type="OBJECT" id="cluster" selected="true" />
++            <filter-element type="OBJECT" id="dblink" selected="true" />
++          </public-schema>
++          <any-schema>
++            <filter-element type="OBJECT" id="table" selected="true" />
++            <filter-element type="OBJECT" id="view" selected="true" />
++            <filter-element type="OBJECT" id="materialized view" selected="true" />
++            <filter-element type="OBJECT" id="index" selected="true" />
++            <filter-element type="OBJECT" id="constraint" selected="true" />
++            <filter-element type="OBJECT" id="trigger" selected="true" />
++            <filter-element type="OBJECT" id="synonym" selected="true" />
++            <filter-element type="OBJECT" id="sequence" selected="true" />
++            <filter-element type="OBJECT" id="procedure" selected="true" />
++            <filter-element type="OBJECT" id="function" selected="true" />
++            <filter-element type="OBJECT" id="package" selected="true" />
++            <filter-element type="OBJECT" id="type" selected="true" />
++            <filter-element type="OBJECT" id="dimension" selected="true" />
++            <filter-element type="OBJECT" id="cluster" selected="true" />
++            <filter-element type="OBJECT" id="dblink" selected="true" />
++          </any-schema>
++        </extended-filter>
++      </filters>
++      <sorting enabled="true">
++        <sorting-element type="RESERVED_WORD" id="keyword" />
++        <sorting-element type="RESERVED_WORD" id="datatype" />
++        <sorting-element type="OBJECT" id="column" />
++        <sorting-element type="OBJECT" id="table" />
++        <sorting-element type="OBJECT" id="view" />
++        <sorting-element type="OBJECT" id="materialized view" />
++        <sorting-element type="OBJECT" id="index" />
++        <sorting-element type="OBJECT" id="constraint" />
++        <sorting-element type="OBJECT" id="trigger" />
++        <sorting-element type="OBJECT" id="synonym" />
++        <sorting-element type="OBJECT" id="sequence" />
++        <sorting-element type="OBJECT" id="procedure" />
++        <sorting-element type="OBJECT" id="function" />
++        <sorting-element type="OBJECT" id="package" />
++        <sorting-element type="OBJECT" id="type" />
++        <sorting-element type="OBJECT" id="dimension" />
++        <sorting-element type="OBJECT" id="cluster" />
++        <sorting-element type="OBJECT" id="dblink" />
++        <sorting-element type="OBJECT" id="schema" />
++        <sorting-element type="OBJECT" id="role" />
++        <sorting-element type="OBJECT" id="user" />
++        <sorting-element type="RESERVED_WORD" id="function" />
++        <sorting-element type="RESERVED_WORD" id="parameter" />
++      </sorting>
++      <format>
++        <enforce-code-style-case value="true" />
++      </format>
++    </code-completion-settings>
++    <execution-engine-settings>
++      <statement-execution>
++        <fetch-block-size value="100" />
++        <execution-timeout value="20" />
++        <debug-execution-timeout value="600" />
++        <focus-result value="false" />
++        <prompt-execution value="false" />
++      </statement-execution>
++      <script-execution>
++        <command-line-interfaces />
++        <execution-timeout value="300" />
++      </script-execution>
++      <method-execution>
++        <execution-timeout value="30" />
++        <debug-execution-timeout value="600" />
++        <parameter-history-size value="10" />
++      </method-execution>
++    </execution-engine-settings>
++    <operation-settings>
++      <transactions>
++        <uncommitted-changes>
++          <on-project-close value="ASK" />
++          <on-disconnect value="ASK" />
++          <on-autocommit-toggle value="ASK" />
++        </uncommitted-changes>
++        <multiple-uncommitted-changes>
++          <on-commit value="ASK" />
++          <on-rollback value="ASK" />
++        </multiple-uncommitted-changes>
++      </transactions>
++      <session-browser>
++        <disconnect-session value="ASK" />
++        <kill-session value="ASK" />
++        <reload-on-filter-change value="false" />
++      </session-browser>
++      <compiler>
++        <compile-type value="KEEP" />
++        <compile-dependencies value="ASK" />
++        <always-show-controls value="false" />
++      </compiler>
++      <debugger>
++        <debugger-type value="ASK" />
++        <use-generic-runners value="true" />
++      </debugger>
++    </operation-settings>
++    <ddl-file-settings>
++      <extensions>
++        <mapping file-type-id="VIEW" extensions="vw" />
++        <mapping file-type-id="TRIGGER" extensions="trg" />
++        <mapping file-type-id="PROCEDURE" extensions="prc" />
++        <mapping file-type-id="FUNCTION" extensions="fnc" />
++        <mapping file-type-id="PACKAGE" extensions="pkg" />
++        <mapping file-type-id="PACKAGE_SPEC" extensions="pks" />
++        <mapping file-type-id="PACKAGE_BODY" extensions="pkb" />
++        <mapping file-type-id="TYPE" extensions="tpe" />
++        <mapping file-type-id="TYPE_SPEC" extensions="tps" />
++        <mapping file-type-id="TYPE_BODY" extensions="tpb" />
++      </extensions>
++      <general>
++        <lookup-ddl-files value="true" />
++        <create-ddl-files value="false" />
++        <synchronize-ddl-files value="true" />
++        <use-qualified-names value="false" />
++        <make-scripts-rerunnable value="true" />
++      </general>
++    </ddl-file-settings>
++    <general-settings>
++      <regional-settings>
++        <date-format value="MEDIUM" />
++        <number-format value="UNGROUPED" />
++        <locale value="SYSTEM_DEFAULT" />
++        <use-custom-formats value="false" />
++      </regional-settings>
++      <environment>
++        <environment-types>
++          <environment-type id="development" name="Development" description="Development environment" color="-2430209/-12296320" readonly-code="false" readonly-data="false" />
++          <environment-type id="integration" name="Integration" description="Integration environment" color="-2621494/-12163514" readonly-code="true" readonly-data="false" />
++          <environment-type id="production" name="Production" description="Productive environment" color="-11574/-10271420" readonly-code="true" readonly-data="true" />
++          <environment-type id="other" name="Other" description="" color="-1576/-10724543" readonly-code="false" readonly-data="false" />
++        </environment-types>
++        <visibility-settings>
++          <connection-tabs value="true" />
++          <dialog-headers value="true" />
++          <object-editor-tabs value="true" />
++          <script-editor-tabs value="false" />
++          <execution-result-tabs value="true" />
++        </visibility-settings>
++      </environment>
++    </general-settings>
++  </component>
++  <component name="DBNavigator.Project.StatementExecutionManager">
++    <execution-variables />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/ru/sapteh/controls/ControllerAddUserWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ru/sapteh/controls/ControllerAddUserWindow.java b/src/main/java/ru/sapteh/controls/ControllerAddUserWindow.java
+new file mode 100644
+--- /dev/null	(date 1613059083814)
++++ b/src/main/java/ru/sapteh/controls/ControllerAddUserWindow.java	(date 1613059083814)
+@@ -0,0 +1,40 @@
++package ru.sapteh.controls;
++
++import javafx.fxml.FXML;
++import javafx.scene.control.TextField;
++import org.hibernate.SessionFactory;
++import org.hibernate.cfg.Configuration;
++import ru.sapteh.dao.Dao;
++import ru.sapteh.model.EntityUser;
++import ru.sapteh.service.UserService;
++
++public class ControllerAddUserWindow {
++
++    private final SessionFactory factory;
++
++
++    public ControllerAddUserWindow(){
++        factory = new Configuration().configure().buildSessionFactory();
++    }
++
++//    textField;
++    @FXML
++    private TextField txtFirstName;
++    @FXML
++    private TextField txtLastName;
++    @FXML
++    private TextField txtEmail;
++
++
++//    buttons;
++    public void butAddUser(){
++        Dao<EntityUser, Integer> daoUsers = new UserService(factory);
++
++        EntityUser user = new EntityUser();
++        user.setFirstName(txtFirstName.getText());
++        user.setLastName(txtLastName.getText());
++        user.setEmail(txtEmail.getText());
++
++        daoUsers.save(user);
++    }
++}
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(date 1612958678000)
++++ b/.idea/uiDesigner.xml	(date 1612958678000)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/resources/view/addUserWindow.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/view/addUserWindow.fxml b/src/main/resources/view/addUserWindow.fxml
+new file mode 100644
+--- /dev/null	(date 1613057398970)
++++ b/src/main/resources/view/addUserWindow.fxml	(date 1613057398970)
+@@ -0,0 +1,35 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++<?import javafx.scene.text.*?>
++
++
++<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sapteh.controls.ControllerAddUserWindow">
++   <children>
++      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="136.0" text="Create new user">
++         <font>
++            <Font name="System Bold" size="18.0" />
++         </font>
++      </Label>
++      <TextField fx:id="txtFirstName" layoutX="263.0" layoutY="119.0" prefHeight="25.0" prefWidth="191.0" />
++      <TextField fx:id="txtLastName" layoutX="263.0" layoutY="177.0" prefHeight="25.0" prefWidth="191.0" />
++      <TextField fx:id="txtEmail" layoutX="263.0" layoutY="235.0" prefHeight="25.0" prefWidth="191.0" />
++      <Button layoutX="517.0" layoutY="235.0" mnemonicParsing="false" onAction="#butAddUser" prefHeight="25.0" prefWidth="95.0" text="Add" />
++      <Label layoutX="150.0" layoutY="121.0" prefHeight="20.0" prefWidth="84.0" text="First Name: ">
++         <font>
++            <Font size="14.0" />
++         </font>
++      </Label>
++      <Label layoutX="150.0" layoutY="179.0" prefHeight="20.0" prefWidth="84.0" text="Last Name: ">
++         <font>
++            <Font size="14.0" />
++         </font>
++      </Label>
++      <Label layoutX="150.0" layoutY="239.0" prefHeight="20.0" prefWidth="84.0" text="Email: ">
++         <font>
++            <Font size="14.0" />
++         </font>
++      </Label>
++   </children>
++</AnchorPane>
+Index: .idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea.xml b/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea.xml
+new file mode 100644
+--- /dev/null	(date 1612892414000)
++++ b/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea.xml	(date 1612892414000)
+@@ -0,0 +1,1000 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<dataSource name="users@localhost">
++  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.20">
++    <root id="1">
++      <ServerVersion>8.0.23</ServerVersion>
++      <DefaultEngine>InnoDB</DefaultEngine>
++      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
++      <DefaultCasing>lower/lower</DefaultCasing>
++    </root>
++    <schema id="2" parent="1" name="information_schema">
++      <Collation>utf8_general_ci</Collation>
++    </schema>
++    <schema id="3" parent="1" name="mysql">
++      <Collation>utf8mb4_0900_ai_ci</Collation>
++    </schema>
++    <schema id="4" parent="1" name="performance_schema">
++      <Collation>utf8mb4_0900_ai_ci</Collation>
++    </schema>
++    <schema id="5" parent="1" name="sakila">
++      <Collation>utf8mb4_0900_ai_ci</Collation>
++    </schema>
++    <schema id="6" parent="1" name="sys">
++      <Collation>utf8mb4_0900_ai_ci</Collation>
++    </schema>
++    <schema id="7" parent="1" name="users">
++      <Current>1</Current>
++      <Collation>utf8_general_ci</Collation>
++    </schema>
++    <schema id="8" parent="1" name="world">
++      <Collation>utf8mb4_0900_ai_ci</Collation>
++    </schema>
++    <collation id="9" parent="1" name="armscii8_bin">
++      <Charset>armscii8</Charset>
++    </collation>
++    <collation id="10" parent="1" name="armscii8_general_ci">
++      <Charset>armscii8</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="11" parent="1" name="ascii_bin">
++      <Charset>ascii</Charset>
++    </collation>
++    <collation id="12" parent="1" name="ascii_general_ci">
++      <Charset>ascii</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="13" parent="1" name="big5_bin">
++      <Charset>big5</Charset>
++    </collation>
++    <collation id="14" parent="1" name="big5_chinese_ci">
++      <Charset>big5</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="15" parent="1" name="binary">
++      <Charset>binary</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="16" parent="1" name="cp1250_bin">
++      <Charset>cp1250</Charset>
++    </collation>
++    <collation id="17" parent="1" name="cp1250_croatian_ci">
++      <Charset>cp1250</Charset>
++    </collation>
++    <collation id="18" parent="1" name="cp1250_czech_cs">
++      <Charset>cp1250</Charset>
++    </collation>
++    <collation id="19" parent="1" name="cp1250_general_ci">
++      <Charset>cp1250</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="20" parent="1" name="cp1250_polish_ci">
++      <Charset>cp1250</Charset>
++    </collation>
++    <collation id="21" parent="1" name="cp1251_bin">
++      <Charset>cp1251</Charset>
++    </collation>
++    <collation id="22" parent="1" name="cp1251_bulgarian_ci">
++      <Charset>cp1251</Charset>
++    </collation>
++    <collation id="23" parent="1" name="cp1251_general_ci">
++      <Charset>cp1251</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="24" parent="1" name="cp1251_general_cs">
++      <Charset>cp1251</Charset>
++    </collation>
++    <collation id="25" parent="1" name="cp1251_ukrainian_ci">
++      <Charset>cp1251</Charset>
++    </collation>
++    <collation id="26" parent="1" name="cp1256_bin">
++      <Charset>cp1256</Charset>
++    </collation>
++    <collation id="27" parent="1" name="cp1256_general_ci">
++      <Charset>cp1256</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="28" parent="1" name="cp1257_bin">
++      <Charset>cp1257</Charset>
++    </collation>
++    <collation id="29" parent="1" name="cp1257_general_ci">
++      <Charset>cp1257</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="30" parent="1" name="cp1257_lithuanian_ci">
++      <Charset>cp1257</Charset>
++    </collation>
++    <collation id="31" parent="1" name="cp850_bin">
++      <Charset>cp850</Charset>
++    </collation>
++    <collation id="32" parent="1" name="cp850_general_ci">
++      <Charset>cp850</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="33" parent="1" name="cp852_bin">
++      <Charset>cp852</Charset>
++    </collation>
++    <collation id="34" parent="1" name="cp852_general_ci">
++      <Charset>cp852</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="35" parent="1" name="cp866_bin">
++      <Charset>cp866</Charset>
++    </collation>
++    <collation id="36" parent="1" name="cp866_general_ci">
++      <Charset>cp866</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="37" parent="1" name="cp932_bin">
++      <Charset>cp932</Charset>
++    </collation>
++    <collation id="38" parent="1" name="cp932_japanese_ci">
++      <Charset>cp932</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="39" parent="1" name="dec8_bin">
++      <Charset>dec8</Charset>
++    </collation>
++    <collation id="40" parent="1" name="dec8_swedish_ci">
++      <Charset>dec8</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="41" parent="1" name="eucjpms_bin">
++      <Charset>eucjpms</Charset>
++    </collation>
++    <collation id="42" parent="1" name="eucjpms_japanese_ci">
++      <Charset>eucjpms</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="43" parent="1" name="euckr_bin">
++      <Charset>euckr</Charset>
++    </collation>
++    <collation id="44" parent="1" name="euckr_korean_ci">
++      <Charset>euckr</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="45" parent="1" name="gb18030_bin">
++      <Charset>gb18030</Charset>
++    </collation>
++    <collation id="46" parent="1" name="gb18030_chinese_ci">
++      <Charset>gb18030</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="47" parent="1" name="gb18030_unicode_520_ci">
++      <Charset>gb18030</Charset>
++    </collation>
++    <collation id="48" parent="1" name="gb2312_bin">
++      <Charset>gb2312</Charset>
++    </collation>
++    <collation id="49" parent="1" name="gb2312_chinese_ci">
++      <Charset>gb2312</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="50" parent="1" name="gbk_bin">
++      <Charset>gbk</Charset>
++    </collation>
++    <collation id="51" parent="1" name="gbk_chinese_ci">
++      <Charset>gbk</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="52" parent="1" name="geostd8_bin">
++      <Charset>geostd8</Charset>
++    </collation>
++    <collation id="53" parent="1" name="geostd8_general_ci">
++      <Charset>geostd8</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="54" parent="1" name="greek_bin">
++      <Charset>greek</Charset>
++    </collation>
++    <collation id="55" parent="1" name="greek_general_ci">
++      <Charset>greek</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="56" parent="1" name="hebrew_bin">
++      <Charset>hebrew</Charset>
++    </collation>
++    <collation id="57" parent="1" name="hebrew_general_ci">
++      <Charset>hebrew</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="58" parent="1" name="hp8_bin">
++      <Charset>hp8</Charset>
++    </collation>
++    <collation id="59" parent="1" name="hp8_english_ci">
++      <Charset>hp8</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="60" parent="1" name="keybcs2_bin">
++      <Charset>keybcs2</Charset>
++    </collation>
++    <collation id="61" parent="1" name="keybcs2_general_ci">
++      <Charset>keybcs2</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="62" parent="1" name="koi8r_bin">
++      <Charset>koi8r</Charset>
++    </collation>
++    <collation id="63" parent="1" name="koi8r_general_ci">
++      <Charset>koi8r</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="64" parent="1" name="koi8u_bin">
++      <Charset>koi8u</Charset>
++    </collation>
++    <collation id="65" parent="1" name="koi8u_general_ci">
++      <Charset>koi8u</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="66" parent="1" name="latin1_bin">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="67" parent="1" name="latin1_danish_ci">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="68" parent="1" name="latin1_general_ci">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="69" parent="1" name="latin1_general_cs">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="70" parent="1" name="latin1_german1_ci">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="71" parent="1" name="latin1_german2_ci">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="72" parent="1" name="latin1_spanish_ci">
++      <Charset>latin1</Charset>
++    </collation>
++    <collation id="73" parent="1" name="latin1_swedish_ci">
++      <Charset>latin1</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="74" parent="1" name="latin2_bin">
++      <Charset>latin2</Charset>
++    </collation>
++    <collation id="75" parent="1" name="latin2_croatian_ci">
++      <Charset>latin2</Charset>
++    </collation>
++    <collation id="76" parent="1" name="latin2_czech_cs">
++      <Charset>latin2</Charset>
++    </collation>
++    <collation id="77" parent="1" name="latin2_general_ci">
++      <Charset>latin2</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="78" parent="1" name="latin2_hungarian_ci">
++      <Charset>latin2</Charset>
++    </collation>
++    <collation id="79" parent="1" name="latin5_bin">
++      <Charset>latin5</Charset>
++    </collation>
++    <collation id="80" parent="1" name="latin5_turkish_ci">
++      <Charset>latin5</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="81" parent="1" name="latin7_bin">
++      <Charset>latin7</Charset>
++    </collation>
++    <collation id="82" parent="1" name="latin7_estonian_cs">
++      <Charset>latin7</Charset>
++    </collation>
++    <collation id="83" parent="1" name="latin7_general_ci">
++      <Charset>latin7</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="84" parent="1" name="latin7_general_cs">
++      <Charset>latin7</Charset>
++    </collation>
++    <collation id="85" parent="1" name="macce_bin">
++      <Charset>macce</Charset>
++    </collation>
++    <collation id="86" parent="1" name="macce_general_ci">
++      <Charset>macce</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="87" parent="1" name="macroman_bin">
++      <Charset>macroman</Charset>
++    </collation>
++    <collation id="88" parent="1" name="macroman_general_ci">
++      <Charset>macroman</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="89" parent="1" name="sjis_bin">
++      <Charset>sjis</Charset>
++    </collation>
++    <collation id="90" parent="1" name="sjis_japanese_ci">
++      <Charset>sjis</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="91" parent="1" name="swe7_bin">
++      <Charset>swe7</Charset>
++    </collation>
++    <collation id="92" parent="1" name="swe7_swedish_ci">
++      <Charset>swe7</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="93" parent="1" name="tis620_bin">
++      <Charset>tis620</Charset>
++    </collation>
++    <collation id="94" parent="1" name="tis620_thai_ci">
++      <Charset>tis620</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="95" parent="1" name="ucs2_bin">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="96" parent="1" name="ucs2_croatian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="97" parent="1" name="ucs2_czech_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="98" parent="1" name="ucs2_danish_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="99" parent="1" name="ucs2_esperanto_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="100" parent="1" name="ucs2_estonian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="101" parent="1" name="ucs2_general_ci">
++      <Charset>ucs2</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="102" parent="1" name="ucs2_general_mysql500_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="103" parent="1" name="ucs2_german2_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="104" parent="1" name="ucs2_hungarian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="105" parent="1" name="ucs2_icelandic_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="106" parent="1" name="ucs2_latvian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="107" parent="1" name="ucs2_lithuanian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="108" parent="1" name="ucs2_persian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="109" parent="1" name="ucs2_polish_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="110" parent="1" name="ucs2_roman_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="111" parent="1" name="ucs2_romanian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="112" parent="1" name="ucs2_sinhala_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="113" parent="1" name="ucs2_slovak_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="114" parent="1" name="ucs2_slovenian_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="115" parent="1" name="ucs2_spanish2_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="116" parent="1" name="ucs2_spanish_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="117" parent="1" name="ucs2_swedish_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="118" parent="1" name="ucs2_turkish_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="119" parent="1" name="ucs2_unicode_520_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="120" parent="1" name="ucs2_unicode_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="121" parent="1" name="ucs2_vietnamese_ci">
++      <Charset>ucs2</Charset>
++    </collation>
++    <collation id="122" parent="1" name="ujis_bin">
++      <Charset>ujis</Charset>
++    </collation>
++    <collation id="123" parent="1" name="ujis_japanese_ci">
++      <Charset>ujis</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="124" parent="1" name="utf16_bin">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="125" parent="1" name="utf16_croatian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="126" parent="1" name="utf16_czech_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="127" parent="1" name="utf16_danish_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="128" parent="1" name="utf16_esperanto_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="129" parent="1" name="utf16_estonian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="130" parent="1" name="utf16_general_ci">
++      <Charset>utf16</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="131" parent="1" name="utf16_german2_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="132" parent="1" name="utf16_hungarian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="133" parent="1" name="utf16_icelandic_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="134" parent="1" name="utf16_latvian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="135" parent="1" name="utf16_lithuanian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="136" parent="1" name="utf16_persian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="137" parent="1" name="utf16_polish_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="138" parent="1" name="utf16_roman_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="139" parent="1" name="utf16_romanian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="140" parent="1" name="utf16_sinhala_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="141" parent="1" name="utf16_slovak_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="142" parent="1" name="utf16_slovenian_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="143" parent="1" name="utf16_spanish2_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="144" parent="1" name="utf16_spanish_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="145" parent="1" name="utf16_swedish_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="146" parent="1" name="utf16_turkish_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="147" parent="1" name="utf16_unicode_520_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="148" parent="1" name="utf16_unicode_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="149" parent="1" name="utf16_vietnamese_ci">
++      <Charset>utf16</Charset>
++    </collation>
++    <collation id="150" parent="1" name="utf16le_bin">
++      <Charset>utf16le</Charset>
++    </collation>
++    <collation id="151" parent="1" name="utf16le_general_ci">
++      <Charset>utf16le</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="152" parent="1" name="utf32_bin">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="153" parent="1" name="utf32_croatian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="154" parent="1" name="utf32_czech_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="155" parent="1" name="utf32_danish_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="156" parent="1" name="utf32_esperanto_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="157" parent="1" name="utf32_estonian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="158" parent="1" name="utf32_general_ci">
++      <Charset>utf32</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="159" parent="1" name="utf32_german2_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="160" parent="1" name="utf32_hungarian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="161" parent="1" name="utf32_icelandic_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="162" parent="1" name="utf32_latvian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="163" parent="1" name="utf32_lithuanian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="164" parent="1" name="utf32_persian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="165" parent="1" name="utf32_polish_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="166" parent="1" name="utf32_roman_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="167" parent="1" name="utf32_romanian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="168" parent="1" name="utf32_sinhala_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="169" parent="1" name="utf32_slovak_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="170" parent="1" name="utf32_slovenian_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="171" parent="1" name="utf32_spanish2_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="172" parent="1" name="utf32_spanish_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="173" parent="1" name="utf32_swedish_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="174" parent="1" name="utf32_turkish_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="175" parent="1" name="utf32_unicode_520_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="176" parent="1" name="utf32_unicode_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="177" parent="1" name="utf32_vietnamese_ci">
++      <Charset>utf32</Charset>
++    </collation>
++    <collation id="178" parent="1" name="utf8_bin">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="179" parent="1" name="utf8_croatian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="180" parent="1" name="utf8_czech_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="181" parent="1" name="utf8_danish_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="182" parent="1" name="utf8_esperanto_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="183" parent="1" name="utf8_estonian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="184" parent="1" name="utf8_general_ci">
++      <Charset>utf8</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="185" parent="1" name="utf8_general_mysql500_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="186" parent="1" name="utf8_german2_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="187" parent="1" name="utf8_hungarian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="188" parent="1" name="utf8_icelandic_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="189" parent="1" name="utf8_latvian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="190" parent="1" name="utf8_lithuanian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="191" parent="1" name="utf8_persian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="192" parent="1" name="utf8_polish_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="193" parent="1" name="utf8_roman_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="194" parent="1" name="utf8_romanian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="195" parent="1" name="utf8_sinhala_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="196" parent="1" name="utf8_slovak_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="197" parent="1" name="utf8_slovenian_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="198" parent="1" name="utf8_spanish2_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="199" parent="1" name="utf8_spanish_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="200" parent="1" name="utf8_swedish_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="201" parent="1" name="utf8_tolower_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="202" parent="1" name="utf8_turkish_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="203" parent="1" name="utf8_unicode_520_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="204" parent="1" name="utf8_unicode_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="205" parent="1" name="utf8_vietnamese_ci">
++      <Charset>utf8</Charset>
++    </collation>
++    <collation id="206" parent="1" name="utf8mb4_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++      <DefaultForCharset>1</DefaultForCharset>
++    </collation>
++    <collation id="207" parent="1" name="utf8mb4_0900_as_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="208" parent="1" name="utf8mb4_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="209" parent="1" name="utf8mb4_0900_bin">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="210" parent="1" name="utf8mb4_bin">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="211" parent="1" name="utf8mb4_croatian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="212" parent="1" name="utf8mb4_cs_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="213" parent="1" name="utf8mb4_cs_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="214" parent="1" name="utf8mb4_czech_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="215" parent="1" name="utf8mb4_da_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="216" parent="1" name="utf8mb4_da_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="217" parent="1" name="utf8mb4_danish_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="218" parent="1" name="utf8mb4_de_pb_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="219" parent="1" name="utf8mb4_de_pb_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="220" parent="1" name="utf8mb4_eo_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="221" parent="1" name="utf8mb4_eo_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="222" parent="1" name="utf8mb4_es_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="223" parent="1" name="utf8mb4_es_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="224" parent="1" name="utf8mb4_es_trad_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="225" parent="1" name="utf8mb4_es_trad_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="226" parent="1" name="utf8mb4_esperanto_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="227" parent="1" name="utf8mb4_estonian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="228" parent="1" name="utf8mb4_et_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="229" parent="1" name="utf8mb4_et_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="230" parent="1" name="utf8mb4_general_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="231" parent="1" name="utf8mb4_german2_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="232" parent="1" name="utf8mb4_hr_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="233" parent="1" name="utf8mb4_hr_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="234" parent="1" name="utf8mb4_hu_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="235" parent="1" name="utf8mb4_hu_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="236" parent="1" name="utf8mb4_hungarian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="237" parent="1" name="utf8mb4_icelandic_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="238" parent="1" name="utf8mb4_is_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="239" parent="1" name="utf8mb4_is_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="240" parent="1" name="utf8mb4_ja_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="241" parent="1" name="utf8mb4_ja_0900_as_cs_ks">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="242" parent="1" name="utf8mb4_la_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="243" parent="1" name="utf8mb4_la_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="244" parent="1" name="utf8mb4_latvian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="245" parent="1" name="utf8mb4_lithuanian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="246" parent="1" name="utf8mb4_lt_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="247" parent="1" name="utf8mb4_lt_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="248" parent="1" name="utf8mb4_lv_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="249" parent="1" name="utf8mb4_lv_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="250" parent="1" name="utf8mb4_persian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="251" parent="1" name="utf8mb4_pl_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="252" parent="1" name="utf8mb4_pl_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="253" parent="1" name="utf8mb4_polish_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="254" parent="1" name="utf8mb4_ro_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="255" parent="1" name="utf8mb4_ro_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="256" parent="1" name="utf8mb4_roman_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="257" parent="1" name="utf8mb4_romanian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="258" parent="1" name="utf8mb4_ru_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="259" parent="1" name="utf8mb4_ru_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="260" parent="1" name="utf8mb4_sinhala_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="261" parent="1" name="utf8mb4_sk_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="262" parent="1" name="utf8mb4_sk_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="263" parent="1" name="utf8mb4_sl_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="264" parent="1" name="utf8mb4_sl_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="265" parent="1" name="utf8mb4_slovak_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="266" parent="1" name="utf8mb4_slovenian_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="267" parent="1" name="utf8mb4_spanish2_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="268" parent="1" name="utf8mb4_spanish_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="269" parent="1" name="utf8mb4_sv_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="270" parent="1" name="utf8mb4_sv_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="271" parent="1" name="utf8mb4_swedish_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="272" parent="1" name="utf8mb4_tr_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="273" parent="1" name="utf8mb4_tr_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="274" parent="1" name="utf8mb4_turkish_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="275" parent="1" name="utf8mb4_unicode_520_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="276" parent="1" name="utf8mb4_unicode_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="277" parent="1" name="utf8mb4_vi_0900_ai_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="278" parent="1" name="utf8mb4_vi_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="279" parent="1" name="utf8mb4_vietnamese_ci">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <collation id="280" parent="1" name="utf8mb4_zh_0900_as_cs">
++      <Charset>utf8mb4</Charset>
++    </collation>
++    <user id="281" parent="1" name="mysql.infoschema">
++      <Host>localhost</Host>
++      <ObjectGrants>SELECT
++SYSTEM_USER
++</ObjectGrants>
++    </user>
++    <user id="282" parent="1" name="mysql.session">
++      <Host>localhost</Host>
++      <ObjectGrants>SHUTDOWN,SUPER
++BACKUP_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,PERSIST_RO_VARIABLES_ADMIN,SESSION_VARIABLES_ADMIN,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN
++SELECT|performance_schema
++SELECT|mysql.user
++</ObjectGrants>
++    </user>
++    <user id="283" parent="1" name="mysql.sys">
++      <Host>localhost</Host>
++      <ObjectGrants>SYSTEM_USER
++TRIGGER|sys
++SELECT|sys.sys_config
++</ObjectGrants>
++    </user>
++    <user id="284" parent="1" name="root">
++      <Host>localhost</Host>
++      <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,RELOAD,SHUTDOWN,PROCESS,FILE,REFERENCES,INDEX,ALTER,SHOW DATABASES,SUPER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,REPLICATION SLAVE,REPLICATION CLIENT,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,CREATE USER,EVENT,TRIGGER,CREATE TABLESPACE,CREATE ROLE,DROP ROLE!
++</ObjectGrants>
++    </user>
++    <table id="285" parent="7" name="role"/>
++    <table id="286" parent="7" name="user"/>
++    <table id="287" parent="7" name="user_role"/>
++    <column id="288" parent="285" name="id">
++      <Position>1</Position>
++      <DataType>int|0s</DataType>
++      <NotNull>1</NotNull>
++      <SequenceIdentity>null</SequenceIdentity>
++    </column>
++    <column id="289" parent="285" name="role_name">
++      <Position>2</Position>
++      <DataType>varchar(255)|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <key id="290" parent="285" name="PRIMARY">
++      <NameSurrogate>1</NameSurrogate>
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++    <column id="291" parent="286" name="id">
++      <Position>1</Position>
++      <DataType>int|0s</DataType>
++      <NotNull>1</NotNull>
++      <SequenceIdentity>null</SequenceIdentity>
++    </column>
++    <column id="292" parent="286" name="email">
++      <Position>2</Position>
++      <DataType>varchar(255)|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="293" parent="286" name="first_name">
++      <Position>3</Position>
++      <DataType>varchar(255)|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="294" parent="286" name="last_name">
++      <Position>4</Position>
++      <DataType>varchar(255)|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <key id="295" parent="286" name="PRIMARY">
++      <NameSurrogate>1</NameSurrogate>
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++    <column id="296" parent="287" name="id">
++      <Position>1</Position>
++      <DataType>int|0s</DataType>
++      <NotNull>1</NotNull>
++      <SequenceIdentity>null</SequenceIdentity>
++    </column>
++    <column id="297" parent="287" name="roles_id">
++      <Position>2</Position>
++      <DataType>int|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <column id="298" parent="287" name="users_id">
++      <Position>3</Position>
++      <DataType>int|0s</DataType>
++      <NotNull>1</NotNull>
++    </column>
++    <index id="299" parent="287" name="FKeog8p06nu33ihk13roqnrp1y6">
++      <ColNames>roles_id</ColNames>
++      <Type>btree</Type>
++    </index>
++    <index id="300" parent="287" name="FKip2yfnw7nx55paaa4i18j7moj">
++      <ColNames>users_id</ColNames>
++      <Type>btree</Type>
++    </index>
++    <key id="301" parent="287" name="PRIMARY">
++      <NameSurrogate>1</NameSurrogate>
++      <ColNames>id</ColNames>
++      <Primary>1</Primary>
++    </key>
++    <foreign-key id="302" parent="287" name="FKeog8p06nu33ihk13roqnrp1y6">
++      <ColNames>roles_id</ColNames>
++      <RefTableName>role</RefTableName>
++      <RefColNames>id</RefColNames>
++    </foreign-key>
++    <foreign-key id="303" parent="287" name="FKip2yfnw7nx55paaa4i18j7moj">
++      <ColNames>users_id</ColNames>
++      <RefTableName>user</RefTableName>
++      <RefColNames>id</RefColNames>
++    </foreign-key>
++  </database-model>
++</dataSource>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1612889446000)
++++ b/.idea/jarRepositories.xml	(date 1612889446000)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
