@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ec8375-51cc-41b3-97f6-e16391101af3" name="Default Changelist" comment="" />
+    <list default="true" id="72ec8375-51cc-41b3-97f6-e16391101af3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Users.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f43049b1-8f1c-4170-842c-79c4b1f8b5ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/ProgramConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/ProgramStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerAddUserWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerMainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerSetRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/dao/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/model/EntityRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/model/EntityUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/model/EntityUsersRoles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/service/UserRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/addUserWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/mainWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/setRoleWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/ProgramConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/ProgramStart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/controls/ControllerAddUserWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/controls/ControllerMainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/controls/ControllerSetRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/dao/Dao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/dao/DaoUsersRoles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/model/EntityRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/model/EntityUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/model/EntityUsersRoles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/service/RoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/service/UserRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/service/UserService.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +85,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2925483" />
@@ -115,11 +160,33 @@
       <workItem from="1612892133313" duration="2942000" />
       <workItem from="1613054280932" duration="3479000" />
       <workItem from="1613057791006" duration="5212000" />
+      <workItem from="1613063022985" duration="464000" />
+      <workItem from="1613063506199" duration="119000" />
     </task>
+    <task id="LOCAL-00001" summary="UsersRoles">
+      <created>1613063161897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613063161897</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UsersRoles" />
