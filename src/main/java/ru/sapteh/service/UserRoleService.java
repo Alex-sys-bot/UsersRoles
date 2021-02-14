@@ -53,7 +53,7 @@ public class UserRoleService implements Dao<EntityUsersRoles, Integer> {
     @Override
     public List<EntityUsersRoles> readAll() {
         try (Session session = factory.openSession()) {
-            Query<EntityUsersRoles> result = session.createQuery("FROM EntityRoleRoles");
+            Query<EntityUsersRoles> result = session.createQuery("FROM EntityUsersRoles ");
             return result.list();
         }
     }

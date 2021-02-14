@@ -57,6 +57,16 @@ public class ControllerSetRole {
         Dao<EntityUsersRoles, Integer> daoUsersRoles = new UserRoleService(factory);
         EntityUsersRoles usersRoles = new EntityUsersRoles();
 
+        System.out.println(cbRoles.getValue()); // test;
+
+        usersRoles.setUser(cbUsers.getValue());
+        usersRoles.setRole(cbRoles.getValue());
+        SimpleDateFormat format = new SimpleDateFormat();
+        format.applyPattern("yyyy-MM-dd");
+        Date date = format.parse(String.valueOf(dateReg.getValue()));
+
+        usersRoles.setReagistrationDate(date);
+
         daoUsersRoles.save(usersRoles);
 
     }
