@@ -26,6 +26,8 @@
                                        </columnResizePolicy>
                                     </TableView>
                                     <Label fx:id="labelSize" contentDisplay="CENTER" layoutX="100.0" layoutY="658.0" prefHeight="17.0" prefWidth="100.0" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" />
+                                    <Label layoutX="14.0" layoutY="617.0" text="Quantity: " />
+                                    <ComboBox fx:id="quantityRows" layoutX="75.0" layoutY="613.0" onAction="#butCutRows" prefWidth="150.0" />
                                  </children></AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                  <children>
