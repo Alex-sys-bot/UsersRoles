@@ -20,6 +20,8 @@ import ru.sapteh.service.RoleService;
 import ru.sapteh.service.UserService;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ControllerMainWindow {
@@ -30,6 +32,9 @@ public class ControllerMainWindow {
     }
     private final ObservableList<EntityUser> usersList = FXCollections.observableArrayList();
     private final ObservableList<EntityRole> rolesList = FXCollections.observableArrayList();;
+
+
+
 
 //    tables;
 
@@ -71,9 +76,11 @@ public class ControllerMainWindow {
 //    comboBox;
     @FXML
     private ComboBox<String> comboRoles;
+    @FXML
+    private ComboBox<Integer> quantityRows;
 
     public void initialize(){
-//        intiUsers;
+
         initUserList();
 
         tableUsers.setItems(usersList);
@@ -86,8 +93,13 @@ public class ControllerMainWindow {
 
 
 //      quantityRowsUsers;
-        labelSize.setText(String.valueOf("Rows: " + usersList.size()));
+        ObservableList<Integer> listRows = FXCollections.observableArrayList(5,10,15,1000000000);
+        quantityRows.setItems(listRows);
 
+
+
+
+// selectUser;
         tableUsers.getSelectionModel().selectedItemProperty().addListener(
                 (observableValue, oldValue, newValue) -> showPersonDet(newValue));
 
@@ -99,6 +111,7 @@ public class ControllerMainWindow {
         labelLastName.setText(takeValue.getLastName());
         labelEmail.setText(takeValue.getEmail());
         labelRegDate.setText(String.valueOf(takeValue.getRoles().iterator().next().getRole().getRole_name()));
+
         ObservableList<String> list = FXCollections.observableArrayList();
         for (int i = 0; i < takeValue.getRoles().size(); i++) {
                list.add(takeValue.getRoles().iterator().next().getRole().getRole_name());
@@ -120,9 +133,34 @@ public class ControllerMainWindow {
         daoRoles.save(role);
     }
 
+    public void initRows(){
+        if (quantityRows.getValue() != null) {
+            for (int i = quantityRows.getValue(); i < usersList.size(); i++) {
+                usersList.remove(i--);
+            }
+        }
+    }
+
+
 
 
 //    buttons;
+
+    public void butCutRows(){
+        for (int i = 0; i < usersList.size(); i++) {
+            usersList.remove(i--);
+        }
+
+        for (int i = 0; i < rolesList.size(); i++) {
+            rolesList.remove(i--);
+        }
+
+        initUserList();
+        initRows();
+        labelSize.setText("Rows: " + usersList.size());
+    }
+
+
     public void butAddNewUser() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/addUserWindow.fxml"));
         Stage stage = new Stage();
@@ -132,6 +170,7 @@ public class ControllerMainWindow {
         stage.setScene(new Scene(root));
         stage.showAndWait();
     }
+
 
     @SneakyThrows
     public void butSetRole(){

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72ec8375-51cc-41b3-97f6-e16391101af3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USERS.IML" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/dao/DaoUsersRoles.java" afterDir="false" />
+    <list default="true" id="72ec8375-51cc-41b3-97f6-e16391101af3" name="Default Changelist" comment="UsersRoles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerMainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerMainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerSetRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/controls/ControllerSetRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sapteh/service/UserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sapteh/service/UserRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/mainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/mainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/controls/ControllerSetRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/sapteh/controls/ControllerSetRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/sapteh/service/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/sapteh/service/UserRoleService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
       <workItem from="1613057791006" duration="5212000" />
       <workItem from="1613063022985" duration="464000" />
       <workItem from="1613063506199" duration="744000" />
-      <workItem from="1613290600814" duration="3233000" />
+      <workItem from="1613290600814" duration="9924000" />
     </task>
     <task id="LOCAL-00001" summary="UsersRoles">
       <created>1613063161897</created>
@@ -141,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613063764975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UsersRoles">
+      <created>1613295460838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613295460838</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
